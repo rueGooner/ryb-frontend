@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #1e2227;
+  --primary: #ED6464;
+  --primaryDark: #D55A5A;
+  --primaryLight: #F29393;
+
+  --secondary: #82F2E2;
+  --secondaryDark: #4CEDD5;
+  --secondaryLight: #B7F8EE;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
+
+* {
+  box-sizing: border-box;
+  @apply text-gray-500;
+}
+
+.flex-container {
+  @apply flex items-center justify-center flex-col min-h-screen;
+}
+
+.btn {
+  @apply w-full p-2 text-center rounded;
+}
+
+.btn--primary {
+  @apply bg-primary-light text-white transition duration-100 ease-in;
+}
+
+.btn--primary:hover {
+  @apply bg-primary transition duration-100 ease-in shadow-sm;
+}
+
+.link {
+  @apply p-1 no-underline italic;
+}
+
+.link--primary {
+  @apply text-primary border-b border-transparent transition duration-100 ease-in;
+}
+
+.link--primary:hover {
+  @apply border-b border-primary transition duration-100 ease-in;
+}
