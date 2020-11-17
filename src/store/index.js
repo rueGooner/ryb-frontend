@@ -9,8 +9,6 @@ const vuexLocalStorage = new VuexPersist({
   storage: window.localStorage,
   reducer: state => ({
     auth: state.auth,
-    notifications: state.notifications,
-    loading: state.loading,
   }),
 });
 
