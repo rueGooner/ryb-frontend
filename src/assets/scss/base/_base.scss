@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  min-height: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+}
+
+html {
+  font-size: 62.5%;
+}

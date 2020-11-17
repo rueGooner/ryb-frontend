@@ -7,6 +7,7 @@ import axios from 'axios';
 axios.defaults.baseURL = 'http://localhost:8888';
 
 import '@/assets/styles/tailwind.css';
+import './assets/scss/main.scss';
 
 Vue.config.productionTip = false
 
