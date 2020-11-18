@@ -36,13 +36,19 @@ export default {
 
   methods: {
     handleLogin() {
-      this.$store.dispatch('signIn', this.user);
+      this.$store.dispatch('handleLogin', this.user);
     }
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.flex-container {
+  background-image: url('../assets/logo-opacity.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+}
 .login-form {
   @apply bg-white p-10 rounded-xl shadow-lg flex flex-col;
 

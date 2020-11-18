@@ -5,21 +5,18 @@ const defaultState = () => ({
   token: ''
 });
 
-export const state = defaultState();
+const state = defaultState();
 
-export const getters = {
-  getterValue: state => {
-    return state.value
-  }
+const getters = {
 }
 
-export const mutations = {
+const mutations = {
   updateValue: (state, payload) => {
     state.value = payload
   }
 }
 
-export const actions = {
+const actions = {
   async handleLogin({ commit }, user) {
     try {
       const loginAttempt = await axios.post('login', user);
@@ -30,3 +27,10 @@ export const actions = {
     }
   }
 }
+
+export default {
+  state,
+  actions,
+  mutations,
+  getters
+};
