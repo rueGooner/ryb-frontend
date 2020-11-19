@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>DASHBOARD</h1>
+  <div class="flex-container">
+    <h1>DASHBOARD PAGE</h1>
   </div>
 </template>
 

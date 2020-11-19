@@ -1,9 +1,21 @@
 <template>
-  <div id="app" class="flex-container">
-    <div v-if="$route.name !== 'Login'" id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app">
+    <Navigation v-if="$route.name !== 'Login'" :routes="$router.options.routes" />
+    <router-view />
   </div>
 </template>
+
+
+<script>
+import Navigation from '@/components/Shared/Navigation';
+
+  export default {
+    components: {
+      Navigation,
+    },
+  }
+</script>
+
+<style lang="scss" scoped>
+
+</style>
