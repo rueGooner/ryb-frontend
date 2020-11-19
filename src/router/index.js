@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueCookie from 'vue-cookie';
 
 Vue.use(VueRouter)
 
@@ -31,7 +32,7 @@ router.beforeEach((to, from, next) => {
   console.log('BEFORE_EACH', to);
   console.log('BEFORE_EACH', from);
   console.log('BEFORE_EACH', next);
-  const isAuthenticated = localStorage.getItem('token');
+  const isAuthenticated = VueCookie.get('rmb');
   if (to.name !== 'Login' && !isAuthenticated) next({ name: 'Login' })
   else next()
 });

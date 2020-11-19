@@ -1,5 +1,6 @@
 import axios from 'axios';
-import router from '../../router/';
+import VueCookie from 'vue-cookie';
+import router from '@/router/';
 
 const defaultState = () => ({
   user: '',
@@ -17,6 +18,7 @@ const mutations = {
   },
 
   SET_TOKEN: (state, token) => {
+    VueCookie.set('rmb', token, '10h');
     state.token = token;
   }
 }
