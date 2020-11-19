@@ -34,7 +34,7 @@ const actions = {
         message: [data.message],
         type: 'success'
       });
-      router.push('/')
+      router.push('/dashboard')
     } catch (error) {
       dispatch('handleNotification', {
         message: error.response.data.errors,

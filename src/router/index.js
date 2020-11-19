@@ -12,6 +12,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
   },
   {
+    path: '/dashboard',
+    name: 'Dashboard',
+    meta: { requiresAuth: true },
+    component: () => import(/* webpackChunkName: "home" */ '../views/Dashboard.vue'),
+  },
+  {
     path: '/login',
     name: 'Login',
     component: () =>
