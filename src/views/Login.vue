@@ -1,6 +1,8 @@
 <template>
   <div class="flex-container w-full px-10">
-    <form class="login-form w-full md:w-1/4">
+    <Notification v-if="displayNotification" :notifications="notifications" :notificationType="notificationType" />
+    <Loader v-if="isLoading" />
+    <form v-if="!isLoading" class="login-form w-full md:w-1/4">
       <div class="input-wrap">
         <input v-model="user.email" type="email" placeholder="Type your email" />
         <at-sign-icon size="1x" class="icon"></at-sign-icon>
@@ -18,20 +20,29 @@
 
 <script>
 import { AtSignIcon, UnlockIcon } from 'vue-feather-icons';
+import Notification from '@/components/Shared/Notification';
+import Loader from '@/components/Shared/Loader';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Login',
 
   data: () => ({
     user: {
-      email: '',
-      password: ''
+      email: 'ruebencee@gmail.com',
+      password: 'password'
     }
   }),
 
   components: {
     AtSignIcon,
     UnlockIcon,
+    Notification,
+    Loader
+  },
+
+  computed: {
+    ...mapGetters(['displayNotification', 'notifications', 'notificationType', 'isLoading']),
   },
 
   methods: {
