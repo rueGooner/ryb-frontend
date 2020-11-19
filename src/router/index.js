@@ -1,40 +1,47 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 import VueCookie from 'vue-cookie';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
+    meta: { requiresAuth: true },
+    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
   },
   {
     path: '/login',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
+    component: () =>
+      import(/* webpackChunkName: "login" */ '../views/Login.vue'),
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/About.vue'),
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
-})
-
-router.beforeEach((to, from, next) => {
-  console.log('BEFORE_EACH', to);
-  console.log('BEFORE_EACH', from);
-  console.log('BEFORE_EACH', next);
-  const isAuthenticated = VueCookie.get('rmb');
-  if (to.name !== 'Login' && !isAuthenticated) next({ name: 'Login' })
-  else next()
+  routes,
 });
 
-export default router
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = VueCookie.get('rmb');
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    if (isAuthenticated && to.name !== 'Login') {
+      next();
+      return;
+    }
+    next('/login')
+  } else {
+    next();
+  }
+});
+
+export default router;

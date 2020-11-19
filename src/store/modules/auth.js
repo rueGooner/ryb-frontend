@@ -36,7 +36,6 @@ const actions = {
       });
       router.push('/')
     } catch (error) {
-      console.log('ERROR @ LOGIN', error.response);
       dispatch('handleNotification', {
         message: error.response.data.errors,
         type: 'error'
