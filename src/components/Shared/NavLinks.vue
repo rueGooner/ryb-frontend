@@ -1,8 +1,10 @@
 <template>
   <div class="nav-links hidden md:flex md:justify-between md:bg-transparent">
-    <router-link :key="routeIndex" v-for="(route, routeIndex) in routes" :to="route.path" class="nav-link">
-      {{ route.name }}
-    </router-link>
+    <router-link to="/" class="nav-link">Home</router-link>
+    <router-link to="/dashboard" class="nav-link">Dashboard</router-link>
+    <router-link to="/offers" class="nav-link">Offers</router-link>
+    <router-link to="/login" class="nav-link">Login</router-link>
+    <router-link to="/register" class="nav-link">Register</router-link>
   </div>
 </template>
 
@@ -10,15 +12,9 @@
   export default {
     name: 'NavLinks',
 
-    props: {
-      routes: {
-        type: Array,
-        default: () => []
-      },
-
-      sidebar: {
-        type: Boolean,
-        default: false,
+    computed: {
+      filteredRoutes() {
+        return this.routes.filter(a => a.meta.displayInNavigation);
       }
     },
   }
@@ -31,7 +27,15 @@
   }
 
   .nav-link {
-    @apply p-3 block;
+    @apply px-3 py-1 block mx-2 border-b border-t border-transparent transition duration-100 ease-in;
+
+    &:hover {
+      @apply border-primary;
+    }
+
+    &.router-link-exact-active {
+      @apply border-b border-t border-secondary;
+    }
   }
 }
 </style>

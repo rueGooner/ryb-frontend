@@ -2,7 +2,8 @@
   <nav
     class="flex w-full items-center justify-between px-6 h-20 bg-white text-gray-700 border-b border-gray-200 z-10"
   >
-    <div class="flex items-center">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="flex items-center md:hidden">
       <button class="mr-2" aria-label="Open Menu" @click="drawer">
         <svg
           fill="none"
@@ -17,8 +18,10 @@
         </svg>
       </button>
     </div>
-      <img src="../../assets/logo-primary.png" alt="Logo" class="h-auto w-24" />
-      <NavLinks :routes="$router.options.routes" />
+    <div class="flex items-center justify-center">
+      <img src="../../assets/logo-opacity.png" alt="Logo" class="h-auto w-16" />
+    </div>
+    <NavLinks :routes="$router.options.routes" />
 
     <transition
       enter-class="opacity-0"
@@ -41,6 +44,7 @@
       </div>
     </transition>
    <Sidebar :is-open="isOpen" />
+    </div>
   </nav>
 </template>
 
@@ -57,7 +61,7 @@ export default {
   },
 
   data: () => ({
-    isOpen: true,
+    isOpen: false,
   }),
 
   props: {

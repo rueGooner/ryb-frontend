@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    meta: { requiresAuth: true },
+    meta: { requiresAuth: true,  },
     component: () => import(/* webpackChunkName: "home" */ '../views/Dashboard.vue'),
   },
   {
