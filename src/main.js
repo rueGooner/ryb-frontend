@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import axios from 'axios';
+import VueCarousel from 'vue-carousel';
+
+Vue.use(VueCarousel);
 
 axios.defaults.baseURL = 'http://localhost:8888/api';
 
