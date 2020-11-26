@@ -10,6 +10,7 @@ const defaultState = () => ({
 const state = defaultState();
 
 const getters = {
+  authUser: state => state.user
 }
 
 const mutations = {

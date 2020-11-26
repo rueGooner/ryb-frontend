@@ -20,7 +20,8 @@ module.exports = {
         'warning': theme('colors.orange.500'),
         'notice': theme('colors.blue.500'),
         'success': theme('colors.green.500'),
-      })
+      }),
+      boxShadow: ['active', 'focus'],
     },
   },
   variants: {},

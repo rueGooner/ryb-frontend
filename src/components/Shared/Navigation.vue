@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex w-full items-center justify-between px-6 h-20 bg-white text-gray-700 border-b border-gray-200 z-10"
+    class="absolute sm:relative flex w-full items-center justify-between px-6 h-20 bg-white text-gray-700 border-b border-gray-200 z-10"
   >
     <div class="container mx-auto flex items-center justify-between">
       <div class="flex items-center md:hidden">
@@ -61,7 +61,7 @@ export default {
   },
 
   data: () => ({
-    isOpen: false,
+    isOpen: true,
   }),
 
   props: {

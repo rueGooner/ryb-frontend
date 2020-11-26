@@ -8,9 +8,9 @@
       class="flex flex-row w-full items-center p-4"
     >
       <img src="../../assets/logo-primary.png" alt="Logo" class="h-auto w-12 rounded-full" />
-      <div class="flex flex-col ml-5">
-        <h4 class="font-bold text-base">Name</h4>
-        <p class="text-base">Username</p>
+      <div class="flex flex-col ml-5 leading-snug">
+        <h4 class="font-bold text-base">{{ authUser.name }}</h4>
+        <p class="text-base">{{ authUser.username }}</p>
       </div>
     </div>
     <div class="flex flex-row items-center px-4 mb-4">
@@ -68,7 +68,13 @@ export default {
     isOpen: {
       type: Boolean,
       default: true
-    },
+    }
+  },
+
+  computed: {
+    authUser() {
+      return this.$store.getters.authUser;
+    }
   },
 };
 </script>
@@ -80,10 +86,10 @@ export default {
   }
 
   &-link {
-    @apply flex items-center px-4 mb-2;
+    @apply flex items-center p-4 mb-2;
 
     &__text {
-      @apply ml-5 text-xl p-4 flex-grow;
+      @apply ml-5 text-xl flex-grow;
     }
   }
 }
