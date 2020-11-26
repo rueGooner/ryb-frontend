@@ -36,6 +36,12 @@ const actions = {
       });
       router.push('/dashboard')
     } catch (error) {
+      if (error.message === 'Network Error') {
+        dispatch('handleNotification', {
+          message: ['There seems to be a problem connecting. Please try again later.'],
+          type: 'error'
+        });
+      }
       dispatch('handleNotification', {
         message: error.response.data.errors,
         type: 'error'

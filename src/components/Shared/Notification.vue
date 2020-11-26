@@ -42,12 +42,18 @@ import { AlertCircleIcon, AlertOctagonIcon, CheckCircleIcon, XCircleIcon } from 
 .notifications-wrapper {
   position: absolute;
   top: 20px;
-  right: 20px;
+  width: 90%;
+
+  @media screen and (min-width: 400px) {
+    top: 20px;
+    right: 20px;
+    width: auto;
+  }
 
   @apply flex flex-col;
 
   .notification {
-    @apply p-2 shadow-lg rounded-lg flex mb-2 font-normal items-center;
+    @apply p-2 shadow-lg rounded-lg flex mb-2 font-normal items-center text-lg;
 
     .icon {
       @apply mr-3;

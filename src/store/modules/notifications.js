@@ -39,7 +39,7 @@ const actions = {
     setTimeout(() => {
       commit('DISPLAY_NOTIFICATION', false);
       commit('CLEAR_NOTIFICATIONS');
-    }, 2500);
+    }, 12500);
   }
 }
 
