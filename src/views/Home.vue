@@ -1,5 +1,5 @@
 <template>
-  <div class="home pt-24">
+  <main class="home pt-20">
     <banner-search />
     <div class="container mx-auto">
       <carousel class="-mt-10">
@@ -35,7 +35,7 @@
         </slide>
       </carousel>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

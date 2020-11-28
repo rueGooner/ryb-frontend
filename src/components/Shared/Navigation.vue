@@ -19,7 +19,7 @@
       </button>
     </div>
     <div class="flex items-center justify-center">
-      <img src="../../assets/logo-opacity.png" alt="Logo" class="h-auto w-16" />
+      <img src="../../assets/logo-primary.png" alt="Logo" class="h-auto w-16" />
     </div>
     <NavLinks :routes="$router.options.routes" />
 
@@ -61,7 +61,7 @@ export default {
   },
 
   data: () => ({
-    isOpen: true,
+    isOpen: false,
   }),
 
   props: {

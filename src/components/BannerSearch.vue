@@ -1,6 +1,6 @@
 <template>
  <div class="main-banner">
-   <div class="banner-text absolute">
+   <div class="banner-text">
       <div class="content">
         <h1>WELCOME</h1>
         <p>You will find and rate your barber, or find a new barber.</p>
@@ -10,10 +10,6 @@
         <button type="button" class="search-btn"><search-icon size="1x" class="icon"></search-icon></button>
       </div>
    </div>
-    <picture class="banner-image">
-      <source srcset="http://placebeard.it/1900x400" media="(m-width: 768px)">
-      <img src="../assets/banner-mobile.png" alt="Apple Product" id="my-image-1" class="my_image" >
-    </picture>
     <div class="banner-overlay"></div>
   </div>
 </template>
@@ -32,29 +28,33 @@ export default {
 
 <style lang="scss" scoped>
 .main-banner {
-  @apply relative w-full flex items-center justify-center;
+  height: 450px;
+  background: url('../assets/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  @apply table bg-orange-600 bg-primary;
 
   .banner-text {
-    top: 1vw;
-    bottom: 1vw;
-    left: 1vw;
-    right: 1vw;
-    // background-color: rgba(0, 0, 0, 0.4);
-
-    @apply p-4 rounded-2xl font-normal flex flex-col items-center justify-center;
+    @apply table-cell align-middle p-10;
 
     h1, p {
-      margin: 10px 0 15px;
+      margin: 5px 0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 
-      @apply text-white text-center;
+      @apply text-white text-center font-semibold;
     }
+
+     p {
+       @apply leading-7 mb-4;
+     }
   }
 
   @media screen and (min-width: 400px) {
-    .banner-overlay {
-      @apply absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-l from-white to-transparent;
-    }
+    // .banner-overlay {
+    //   @apply absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-l from-white to-transparent;
+    // }
   }
 
   .banner-image {
@@ -81,7 +81,7 @@ export default {
 
 
     .search-btn {
-      @apply absolute z-10 h-16 w-16 right-0 bg-primary rounded-tr-lg rounded-br-lg flex items-center justify-center;
+      @apply absolute z-10 h-16 w-16 right-0 bg-teal-300 rounded-tr-lg rounded-br-lg flex items-center justify-center;
 
       .icon {
         stroke: #ffffff;
