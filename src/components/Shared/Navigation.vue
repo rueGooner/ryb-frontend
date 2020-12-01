@@ -19,7 +19,7 @@
       </button>
     </div>
     <div class="flex items-center justify-center">
-      <img src="../../assets/logo-primary.png" alt="Logo" class="h-auto w-16" />
+      <img src="../../assets/ryb.png" alt="Logo" class="h-auto w-16" />
     </div>
     <NavLinks :routes="$router.options.routes" />
 

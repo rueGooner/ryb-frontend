@@ -1,6 +1,6 @@
 <template>
   <main class="home pt-20">
-    <banner-search />
+    <Hero />
     <div class="container mx-auto">
       <carousel class="-mt-10">
         <slide class="ryb-slide">
@@ -40,14 +40,14 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
-import BannerSearch from '@/components/BannerSearch';
+import Hero from '@/components/Hero';
 
 export default {
   name: 'Home',
   components: {
     Carousel,
     Slide,
-    BannerSearch
+    Hero
   },
 };
 </script>
