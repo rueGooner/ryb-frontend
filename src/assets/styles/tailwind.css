@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #1e2227;
-  --primary: #ED6464;
-  --primaryDark: #D55A5A;
-  --primaryLight: #F29393;
+  --background: #f4f7f9;
 
-  --secondary: #82F2E2;
-  --secondaryDark: #4CEDD5;
-  --secondaryLight: #B7F8EE;
+  --primary: #3a51c5;
+  --primaryDark: #3449b1;
+  --primaryLight: #7585d6;
+
+  --secondary: #f9d326;
+  --secondaryDark: #e0be22;
+  --secondaryLight: #fbe067;
+
+  --tertirary: #C53A51;
+  --tertiraryDark: #b13449;
+  --tertiraryLight: #d67585;
 }
 
 * {

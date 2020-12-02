@@ -27,14 +27,14 @@
   }
 
   .nav-link {
-    @apply px-3 py-1 block mx-2 border-b border-t border-transparent transition duration-100 ease-in;
+    @apply px-3 py-1 block mx-2 border-b border-b-2 border-transparent transition duration-100 ease-in;
 
     &:hover {
       @apply border-primary;
     }
 
     &.router-link-exact-active {
-      @apply border-b border-t border-secondary;
+      @apply border-b border-b-2 border-secondary;
     }
   }
 }

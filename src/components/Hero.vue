@@ -25,6 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .main-banner {
+  width: 100%;
   height: 450px;
   background: url('../assets/banner.png');
   background-repeat: no-repeat;

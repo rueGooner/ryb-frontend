@@ -14,6 +14,9 @@ module.exports = {
         secondary: 'var(--secondary)',
         'secondary-light': 'var(--secondaryLight)',
         'secondary-dark': 'var(--secondaryDark)',
+        tertiary: 'var(--tertiary)',
+        'tertiary-light': 'var(--tertiaryLight)',
+        'tertiary-dark': 'var(--tertiaryDark)',
       },
       stroke: theme => ({
         'error': theme('colors.red.500'),

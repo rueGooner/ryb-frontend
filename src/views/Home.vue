@@ -1,5 +1,5 @@
 <template>
-  <main class="home pt-20">
+  <main class="home">
     <Hero />
     <div class="container mx-auto">
       <carousel class="-mt-10">
@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  @apply flex items-center flex-col min-h-screen;
+  @apply flex items-center flex-col min-h-screen bg-background;
 
   .ryb-slide {
     @apply mx-10 bg-white h-64 shadow-lg mb-10;

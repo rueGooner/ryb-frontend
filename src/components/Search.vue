@@ -1,11 +1,12 @@
 <template>
-  <div class="relative">
+  <div class="relative flex flex-col md:max-w-md mx-auto">
     <div class="search-wrap">
-      <input placeholder="Search" v-model="search" @input="handleSearch" />
-      <button type="button" class="search-btn">
-        <search-icon size="1x" class="icon"></search-icon>
-      </button>
+      <input placeholder="Start typing..." v-model="search" @input="handleSearch" />
+      <search-icon size="18" class="icon"></search-icon>
     </div>
+    <button type="button" class="search-btn">
+      Search
+    </button>
     <transition-group name="search-suggestions" tag="ul" v-if="displayResults" class="search-suggestions">
      <li v-for="(shop, shopIndex) in results" :key="shopIndex" class="search-suggestion">
        {{ shop }}
@@ -68,12 +69,21 @@ export default {
     }
   }
 
-  .search-btn {
-    @apply absolute z-10 h-16 w-16 right-0 bg-teal-300 rounded-tr-lg rounded-br-lg flex items-center justify-center;
+  .icon {
+    right: 10px;
 
-    .icon {
-      stroke: #ffffff;
-    }
+    stroke: #d2d2d2;
+
+    @apply absolute z-10 rounded-tr-lg rounded-br-lg flex items-center justify-center;
+  }
+
+}
+
+.search-btn {
+  @apply bg-teal-400 rounded h-16 text-white py-3 px-10 mt-6 mx-auto transition duration-100 ease-in;
+
+  &:hover {
+    @apply bg-teal-300;
   }
 }
 
