@@ -29,10 +29,10 @@ export default {
   height: 450px;
   background: url('../assets/banner.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: top;
 
-  @apply table bg-orange-600 bg-primary;
+  @apply table bg-orange-600 bg-secondary;
 
   .banner-text {
     @apply table-cell align-middle p-10;
