@@ -7,7 +7,7 @@
       @click="isOpen = false"
       class="flex flex-row w-full items-center p-4"
     >
-      <img src="../../assets/logo-primary.png" alt="Logo" class="h-auto w-12 rounded-full" />
+      <img src="../../assets/images/logo-primary.png" alt="Logo" class="h-auto w-12 rounded-full" />
       <div class="flex flex-col ml-5 leading-snug">
         <h4 class="font-bold text-base">{{ authUser.name }}</h4>
         <p class="text-base">{{ authUser.username }}</p>

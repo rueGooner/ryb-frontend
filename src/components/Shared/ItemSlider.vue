@@ -1,6 +1,6 @@
 <template>
  <div class="container mx-auto">
-      <carousel class="-mt-10">
+      <carousel>
         <slide class="ryb-slide">
           Slide 1 Content
         </slide>

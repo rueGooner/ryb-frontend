@@ -55,7 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 .flex-container {
-  background-image: url('../assets/logo-opacity.png');
+  background-image: url('../assets/images/logo-opacity.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto;

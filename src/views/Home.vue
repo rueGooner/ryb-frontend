@@ -1,8 +1,10 @@
 <template>
   <main class="home">
     <Hero />
-    <SellingPoints />
-    <ItemSlider />
+    <div class="container">
+      <SellingPoints />
+      <ItemSlider />
+    </div>
   </main>
 </template>
 

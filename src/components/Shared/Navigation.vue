@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="absolute sm:relative flex w-full items-center justify-between px-6 h-20 bg-white text-gray-700 border-b border-gray-200 z-10"
+    class="absolute sm:relative flex w-full items-center justify-between px-6 h-20 text-gray-700 border-b border-gray-200 z-10"
   >
     <div class="container mx-auto flex items-center justify-between">
       <div class="flex items-center md:hidden">
@@ -19,7 +19,7 @@
       </button>
     </div>
     <div class="flex items-center justify-center">
-      <img src="../../assets/ryb.png" alt="Logo" class="h-auto w-16" />
+      <img src="../../assets/images/ryb.png" alt="Logo" class="h-auto w-16" />
     </div>
     <NavLinks :routes="$router.options.routes" />
 
