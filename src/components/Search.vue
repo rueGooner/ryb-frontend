@@ -56,13 +56,13 @@ export default {
 
 <style lang="scss" scoped>
 .search-wrap {
-  @apply flex relative w-full items-center h-16;
+  @apply flex relative w-full items-center h-10;
 
   input {
     width: 100%;
     box-shadow: 0 0 50px -4px rgba(0, 0, 0, 0.25);
 
-    @apply absolute w-full h-full bg-gray-100 px-5 rounded-lg text-lg transition duration-150 ease-in-out outline-none;
+    @apply absolute w-full h-full bg-gray-100 px-5 rounded text-sm transition duration-150 ease-in-out outline-none;
 
     &:focus {
       @apply shadow-lg;
@@ -80,7 +80,7 @@ export default {
 }
 
 .search-btn {
-  @apply bg-teal-400 rounded h-16 text-white py-3 px-10 mt-6 mx-auto transition duration-100 ease-in;
+  @apply bg-teal-400 rounded h-10 text-white py-3 px-10 mt-6 mx-auto transition duration-100 ease-in text-sm;
 
   &:hover {
     @apply bg-teal-300;

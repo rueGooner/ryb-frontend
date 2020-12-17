@@ -53,7 +53,7 @@ import { AlertCircleIcon, AlertOctagonIcon, CheckCircleIcon, XCircleIcon } from 
   @apply flex flex-col;
 
   .notification {
-    @apply p-2 shadow-lg rounded-lg flex mb-2 font-normal items-center text-lg;
+    @apply p-2 shadow-lg rounded-lg flex mb-2 font-normal items-center text-sm;
 
     .icon {
       @apply mr-3;

@@ -12,7 +12,7 @@
         <unlock-icon size="1x" class="icon"></unlock-icon>
       </div>
       <div class="action">
-        <button type="button" class="btn btn--primary h-16" @click="handleLogin">Sign In</button>
+        <button type="button" class="btn btn--primary h-10" @click="handleLogin">Sign In</button>
       </div>
     </form>
   </div>
@@ -71,7 +71,7 @@ export default {
     @apply flex flex-col relative items-center mb-8;
 
     input {
-      @apply w-full bg-gray-100 px-3 h-16 rounded-lg text-lg transition duration-150 ease-in-out;
+      @apply w-full bg-gray-100 px-3 h-10 rounded-lg text-sm transition duration-150 ease-in-out;
 
       &:focus {
         @apply outline-none shadow;
